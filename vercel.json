@@ -1,5 +1,14 @@
 {
-    "rewrites": [
-        {"source": "/(.*)", "destination": "/"}
-    ]
+  "builds": [
+    {
+      "src": "pages_project/asgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "pages_project/asgi.py"
+    }
+  ]
 }
